@@ -22,13 +22,18 @@ It includes basic CRUD operations, query parameters, and data persistence via a 
 ### Clone or download the repository
 ```bash
 git clone https://github.com/<your-username>/fastapi-postman-demo.git
-cd fastapi-postman-demo
+cd fastapi-postman-demo 
+```
 
 ### Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
 ### Run the app
+```bash
 uvicorn main:app --reload
+```
 
 ### View docs
 http://127.0.0.1:8000/docs
@@ -42,13 +47,13 @@ File: postman-json-collection.json
 
 Steps:
 
-Open Postman
+1. Open Postman
 
-Click Import → Upload Files
+2. Click Import → Upload Files
 
-Choose the JSON collection file
+3. Choose the JSON collection file
 
-Set base_url variable to http://127.0.0.1:8000
+4. Set base_url variable to http://127.0.0.1:8000
 
-Try sending each request (GET, POST, PUT, PATCH, DELETE)
+5. Try sending each request (GET, POST, PUT, PATCH, DELETE)
 
