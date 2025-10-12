@@ -53,7 +53,7 @@ Steps:
 
 3. Choose the JSON collection file
 
-4. Set base_url variable to http://127.0.0.1:8000
+4. Verify the base_url variable is to http://127.0.0.1:8000
 
 5. Try sending each request (GET, POST, PUT, PATCH, DELETE)
 
