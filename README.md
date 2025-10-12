@@ -1,1 +1,54 @@
-"# postman-demo" 
+# FastAPI Postman Demo
+
+This is a simple FastAPI application designed to demonstrate REST API concepts using Postman.  
+It includes basic CRUD operations, query parameters, and data persistence via a local JSON file.
+
+---
+
+## Features
+
+- **GET**: Retrieve all students or filter using query parameters  
+- **GET (by ID)**: Retrieve a single student by ID  
+- **POST**: Add a new student  
+- **PUT**: Replace an existing student record  
+- **PATCH**: Partially update a student record  
+- **DELETE**: Remove a student  
+- **Health check** endpoint (`/health`)  
+
+---
+
+## Installation
+
+### Clone or download the repository
+```bash
+git clone https://github.com/<your-username>/fastapi-postman-demo.git
+cd fastapi-postman-demo
+
+### Install dependencies
+pip install -r requirements.txt
+
+### Run the app
+uvicorn main:app --reload
+
+### View docs
+http://127.0.0.1:8000/docs
+http://127.0.0.1:8000/redoc
+
+### Postman demo
+
+You can import the included Postman collection:
+
+File: Postman_API_Demo.postman_collection.json
+
+Steps:
+
+Open Postman
+
+Click Import → Upload Files
+
+Choose the JSON collection file
+
+Set base_url variable to http://127.0.0.1:8000
+
+Try sending each request (GET, POST, PUT, PATCH, DELETE)
+

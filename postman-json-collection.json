@@ -1,0 +1,130 @@
+{
+  "info": {
+    "name": "Postman API Demo",
+    "_postman_id": "9c9b3e26-3a75-4b5b-8db2-d1a3a2f5a0ff",
+    "description": "Demo collection for FastAPI showing GET, POST, PUT, PATCH, DELETE, and query parameters.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{base_url}}/health"
+      }
+    },
+    {
+      "name": "Get All Students",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{base_url}}/students"
+      }
+    },
+    {
+      "name": "Get Student by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{base_url}}/students/1"
+      }
+    },
+    {
+      "name": "Filter Students by Major",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/students?major=Computer%20Science",
+          "host": ["{{base_url}}"],
+          "path": ["students"],
+          "query": [
+            { "key": "major", "value": "Computer Science" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Filter Students by Age",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/students?min_age=21&max_age=23",
+          "host": ["{{base_url}}"],
+          "path": ["students"],
+          "query": [
+            { "key": "min_age", "value": "21" },
+            { "key": "max_age", "value": "23" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Add New Student (POST)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Ali Khan\",\n    \"age\": 19,\n    \"major\": \"Physics\"\n}"
+        },
+        "url": "{{base_url}}/students"
+      }
+    },
+    {
+      "name": "Update Student (PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"John Updated\",\n    \"age\": 21,\n    \"major\": \"Data Science\"\n}"
+        },
+        "url": "{{base_url}}/students/1"
+      }
+    },
+    {
+      "name": "Partial Update (PATCH)",
+      "request": {
+        "method": "PATCH",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"age\": 23\n}"
+        },
+        "url": "{{base_url}}/students/2"
+      }
+    },
+    {
+      "name": "Delete Student",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{base_url}}/students/1"
+      }
+    },
+    {
+      "name": "Get Student Summary (Path + Query)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/students/2/summary?include_major=true",
+          "host": ["{{base_url}}"],
+          "path": ["students", "2", "summary"],
+          "query": [
+            { "key": "include_major", "value": "true" }
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8000"
+    }
+  ]
+}
