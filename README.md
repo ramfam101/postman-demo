@@ -38,7 +38,7 @@ http://127.0.0.1:8000/redoc
 
 You can import the included Postman collection:
 
-File: Postman_API_Demo.postman_collection.json
+File: postman-json-collection.json
 
 Steps:
 
