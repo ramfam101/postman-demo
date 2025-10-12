@@ -104,21 +104,6 @@
         "header": [],
         "url": "{{base_url}}/students/1"
       }
-    },
-    {
-      "name": "Get Student Summary (Path + Query)",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "{{base_url}}/students/2/summary?include_major=true",
-          "host": ["{{base_url}}"],
-          "path": ["students", "2", "summary"],
-          "query": [
-            { "key": "include_major", "value": "true" }
-          ]
-        }
-      }
     }
   ],
   "variable": [

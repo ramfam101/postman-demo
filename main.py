@@ -10,6 +10,11 @@ class Student(BaseModel):
     age: int
     major: Optional[str] = None
 
+class StudentUpdate(BaseModel):
+    name: Optional[str] = None
+    age: Optional[int] = None
+    major: Optional[str] = None
+
 
 app = FastAPI(title = "Postman API Demo")
 
@@ -99,16 +104,21 @@ def update_student(student_id: int, updated: Student):
     raise HTTPException(status_code=404, detail="Student not found")
 
 
+
 @app.patch("/students/{student_id}")
-def patch_student(student_id: int, partial: Student):
+def patch_student(student_id: int, partial: StudentUpdate):
     """PATCH = partial update"""
     data = load_data()
+
     for s in data["students"]:
         if s["id"] == student_id:
-            s.update(partial)
+            update_data = partial.dict(exclude_unset=True)
+            s.update(update_data)
             save_data(data)
             return s
+
     raise HTTPException(status_code=404, detail="Student not found")
+
 
 
 @app.delete("/students/{student_id}")
