@@ -41,19 +41,15 @@ http://127.0.0.1:8000/redoc
 
 ### Postman demo
 
-You can import the included Postman collection:
-
-File: postman-json-collection.json
-
 Steps:
 
 1. Open Postman
 
-2. Click Import → Upload Files
+2. In collections, click Import → Upload Files
 
-3. Choose the JSON collection file
+3. Choose the JSON collection file: **postman-json-collection.json**
 
-4. Verify the base_url variable is to http://127.0.0.1:8000
+5. The base_url variable should be set to http://127.0.0.1:8000, verify this
 
-5. Try sending each request (GET, POST, PUT, PATCH, DELETE)
+6. Demonstrate sending each request (GET, POST, PUT, PATCH, DELETE)
 
