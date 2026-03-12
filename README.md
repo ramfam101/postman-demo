@@ -21,7 +21,7 @@ It includes basic CRUD operations, query parameters, and data persistence via a 
 
 ### Clone or download the repository
 ```bash
-git clone https://github.com/<your-username>/fastapi-postman-demo.git
+git clone https://github.com/ramfam101/postman-demo.git
 cd fastapi-postman-demo 
 ```
 
