@@ -1,16 +1,52 @@
 {
     "students": [
         {
+            "id": 1,
+            "name": "John Doe",
+            "age": 20,
+            "major": "Computer Science"
+        },
+        {
             "id": 2,
             "name": "Jane Smith",
             "age": 23,
             "major": "Mathematics"
         },
         {
+            "id": 3,
             "name": "Ali Khan",
             "age": 19,
-            "major": "Physics",
-            "id": 3
+            "major": "Physics"
+        },
+        {
+            "id": 4,
+            "name": "Maria Garcia",
+            "age": 22,
+            "major": "Computer Science"
+        },
+        {
+            "id": 5,
+            "name": "James Lee",
+            "age": 21,
+            "major": "Mathematics"
+        },
+        {
+            "id": 6,
+            "name": "Priya Patel",
+            "age": 24,
+            "major": "Biology"
+        },
+        {
+            "id": 7,
+            "name": "Carlos Rivera",
+            "age": 20,
+            "major": "Computer Science"
+        },
+        {
+            "id": 8,
+            "name": "Sophie Turner",
+            "age": 22,
+            "major": "Physics"
         }
     ]
 }
